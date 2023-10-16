@@ -7,28 +7,42 @@
     <a href="#">WHOLESALE</a>
 </nav>
 
+<!--  -->
+
 <style>
-  
     nav {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
-        height: 35px;
+        height: 34px;
         background-color: #D10030;
-       
     }
-
-
     a {
         display: flex;
         flex-direction: column;
-        font-size: 15.7px;
+        font-size: 16px;
         text-align: center;
         color: white;
         margin-left: 10px;
         margin-right: 10px;
-        font-weight: 400;
+        font-weight: 500;
+        text-decoration: none; /* Elimina la decoración predeterminada del enlace */
+        position: relative; /* Añade posición relativa para el elemento padre */
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s; /* Agrega una transición para la propiedad width */
+    }
+
+    a:hover::after {
+        width: 100%; /* Al hacer hover, la línea se expande al 100% de la anchura */
     }
 </style>

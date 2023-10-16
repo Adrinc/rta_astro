@@ -1,0 +1,53 @@
+---
+// JavaScript/TypeScript (no es necesario en este caso)
+---
+
+
+      <!-- line -->
+    
+    <div class="switch w-10 h-4  rounded-full shadow-inner">
+      <div class="flag" :class="{ active: selectedCountry === 'USA' }" >
+        <img src="usa.png" >
+      </div>
+      
+      <div class="flag" :class="{ active: selectedCountry === 'Mexico' }" >
+        <img src="mexico.png" >
+      </div>
+    </div>
+
+  
+  <style>
+    
+    .switch {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 120px;
+      height: 50px;
+      background-color: aliceblue;
+    }
+  
+    .flag {
+      width: 45px; /* Ajusta el tamaño de los círculos según tus necesidades */
+      height: 45px;
+      border-radius: 50%;
+      background-color: #f0f0f0; /* Color de fondo gris claro */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: filter 0.3s, box-shadow 0.3s;
+    }
+  
+    .flag.active {
+      background-color: #ffffff; /* Color de fondo blanco para la bandera seleccionada */
+      filter: brightness(1.2); /* Aumenta la saturación de la imagen seleccionada */
+      box-shadow: 0 0 5px #0000ff; /* Sombra difuminada de color azul para la bandera seleccionada */
+    }
+  
+    .flag img {
+      width: 80%; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+    }
+  </style>
+  

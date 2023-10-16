@@ -2,38 +2,48 @@
 interface Props {
 	texto: string;
     link:string;
-    color?:string | "#1daf8a";
+    color?:string;
 }
 
 const { texto } = Astro.props;
 const { link } = Astro.props;
 const { color } = Astro.props;
 
+
 ---
 
 
-<a href={link} class={`flex-row justify-center text-white cursor-pointer hover:bg-${color}-600 focus:ring-4 focus:outline-none focus:ring-${color}/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-${color}/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-90 hover:opacity-100`}>
-  
-  <svg
-  slot="after" 
-  width="24" 
-  height="24" 
-  viewBox="0 0 24 24" 
-  stroke-width="1.5" 
-  stroke="currentColor" 
-  fill="none" 
-  stroke-linecap="round" 
-  stroke-linejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-    <path d="M16 3l0 4"></path>
-    <path d="M8 3l0 4"></path>
-    <path d="M4 11l16 0"></path>
-    <path d="M8 15h2v2h-2z"></path>
-  </svg>
-  
-    <slot name="before"/>
-      {texto}
-    <slot name="after"/>
-  
-  </a>
+<a href={link}>{texto}</a>
+<!--  -->
+
+<style>
+
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 16px;
+        text-align: center;
+        color: #2e5899;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: 500;
+        text-decoration: none; /* Elimina la decoración predeterminada del enlace */
+        position: relative; /* Añade posición relativa para el elemento padre */
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #D10030;
+        transition: width 0.3s; /* Agrega una transición para la propiedad width */
+    }
+
+    a:hover::after {
+        width: 100%; /* Al hacer hover, la línea se expande al 100% de la anchura */
+    }
+</style>

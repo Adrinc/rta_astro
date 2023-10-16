@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+import NavBar from "./NavBar.astro";
+import SwitchCountry from "./SwitchCountry.astro";
+---
+
+
+<div>
+    <Image src="/images/rtalogo.jpeg" alt="rta logo" width="130" height="100"/>
+    <NavBar />
+    <SwitchCountry />
+</div>
+
+<style>
+
+    div
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #ffffff;
+        align-items: center;
+        
+    }
+
+
+</style>
