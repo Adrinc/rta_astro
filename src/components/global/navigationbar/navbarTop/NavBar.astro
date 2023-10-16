@@ -1,0 +1,39 @@
+---
+import BotonNav from './components/BotonNav.astro';
+import Dropdown from './components/Dropdown.astro';
+
+
+interface NavItem {
+  texto: string;
+  link: string;
+  icon: string;
+}
+
+const navItems: NavItem[] = [
+  { texto: 'Home', link: '/', icon: '/home-2.svg' },
+  { texto: 'About', link: '/about', icon: '/info-hexagon-filled.svg#info' },
+  { texto: 'Contact', link: '/contact', icon: '/inbox.svg#inbox' },
+  { texto: 'markdown', link: '/content', icon: '/inbox.svg#inbox' },
+];
+---
+<nav>
+
+  {navItems.map((item) => (
+
+    <BotonNav texto={item.texto} link={item.link} />
+  ))}
+
+</nav>
+
+
+
+<style>
+  nav{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   
+   
+  }
+</style>

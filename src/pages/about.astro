@@ -1,0 +1,28 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+
+export const prerender = false; // esto es para que no se renderice en el servidor
+// use cookies
+
+if (Astro.cookies.get("user")){
+	console.log("user is logged in");
+	Astro.redirect("/dashboard");
+} else {
+/* 	Astro.response({
+		status: 401,
+		body: "You are not logged in",
+		headers: {
+			"Content-Type": "text/plain"
+		}
+		
+	}) */
+	//Astro.redirect("/login");
+}
+---
+
+<Layout title="Adrinc">
+	<h1 class="text-white text-6xl font-bold text-center p-8">ABOUT  </h1>
+
+</Layout>
+
