@@ -1,6 +1,6 @@
 ---
-import Card from '../../components/Card.astro';
-import Layout from '../../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
 
 export const prerender = false; // esto es para que no se renderice en el servidor
 // use cookies
@@ -21,7 +21,7 @@ if (Astro.cookies.get("user")){
 }
 ---
 
-<Layout title="Adrinc">
+<Layout title="About">
 	<h1 class="text-white text-6xl font-bold text-center p-8">ABOUT  </h1>
 
 </Layout>
