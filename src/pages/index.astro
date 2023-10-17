@@ -3,6 +3,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="RTA">
-  <video src="./videos/homevideo.mp4" autoplay loop muted></video>
+  <div>
+    <video src="./videos/homevideo.mp4" autoplay loop muted></video>
+  </div>
 </Layout>
 
+<style>
+  div {
+    width: 100%;
+    height: 770px;
+    overflow: hidden;
+  }	
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+</style>
