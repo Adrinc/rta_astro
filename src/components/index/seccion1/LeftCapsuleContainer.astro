@@ -1,0 +1,58 @@
+---
+---
+
+
+<!-- crea un carrusel de dos columnas, en la columna de la izquierda estará un titulo, subtitulo y un boton, en la columna de la derecha una imagen totalmente circular -->
+
+
+
+
+<div class="carousel-container">
+    <div class="left-column">
+      <h1>Título</h1>
+      <p>Subtítulo</p>
+      <button>Botón</button>
+    </div>
+    <div class="right-column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YCalozv20Oki516pDRvDiNfByLm_OxvEZc6_XN6TIw&s" alt="Imagen circular">
+    </div>
+  </div>
+
+
+
+<style>
+  .carousel-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+    width: 430px;
+    height: 250px;
+  
+  }
+
+  .left-column {
+
+    padding: 20px;
+    background-color: #f0f0f0;
+    opacity: 0.6;
+  }
+
+  .right-column {
+    border-radius: 0 100% 100% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    opacity: 0.6;
+    overflow: hidden;
+  }
+
+  img {
+    border-radius: 50%;
+    max-width: 100%;
+  }
+</style>
+
+

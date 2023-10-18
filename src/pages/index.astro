@@ -1,22 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Seccion1 from '../components/index/seccion1/Seccion1.astro';
+import Section2 from '../components/index/seccion2/Section2.astro';
+
 ---
 
 <Layout title="RTA">
-  <div>
-    <video src="./videos/homevideo.mp4" autoplay loop muted></video>
-  </div>
+<Seccion1/>
+<Section2/>
 </Layout>
 
-<style>
-  div {
-    width: 100%;
-    height: 770px;
-    overflow: hidden;
-  }	
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-</style>

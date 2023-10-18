@@ -1,0 +1,46 @@
+---
+import LeftCapsuleContainer from './LeftCapsuleContainer.astro';
+import RightCapsuleContainer from './RightCapsuleContainer.astro';
+---
+
+<div class="carrusel">
+    <LeftCapsuleContainer />
+</div>
+<div class="check">
+    <RightCapsuleContainer />
+</div>
+
+<video src="./videos/homevideo.mp4" autoplay loop muted/>
+
+
+
+<style>
+      video {
+    width: 100%;
+    height:  800px;
+    object-fit: fill;
+  }
+
+  .carrusel {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -30%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .check {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -30%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+</style>
