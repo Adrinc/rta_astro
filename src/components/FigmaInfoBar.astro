@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<div class="main-container">
+  <div class="image-wrapper">
+    <h2 class="title">Conoce más de nuestro trabajo</h2>
+    <a href="#" class="button">Demo</a>
+  </div>
+</div>
+
+<style>
+  .main-container {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 0px 0px 50px 50px;
+    background-color: var(--secondary, #6a6868);
+    display: flex;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .image-wrapper {
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+    display: flex;
+    width: 684px;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  @media (max-width: 991px) {
+    .image-wrapper {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .image-wrapper {
+      align-self: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .title {
+    color: var(--white, #fff);
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    max-width: 503px;
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .title {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  .button {
+    justify-content: center;
+    color: var(--white, rgb(255, 255, 255));
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    align-self: stretch;
+    white-space: nowrap;
+    border-radius: 25px;
+    background-color: rgb(var(--primary));
+  }
+
+  @media (max-width: 991px) {
+    .button {
+      white-space: initial;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .button {
+      font-size: 20px;
+    }
+  }
+</style>

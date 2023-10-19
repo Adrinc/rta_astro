@@ -1,0 +1,43 @@
+
+<div class="elback" >
+  <div class="left-column">
+ 
+
+      <h1>Título</h1>
+      <p>Subtítulo</p>
+
+  </div>
+
+  <div class="right-column">
+
+      <h1>Título</h1>
+      <p>Subtítulo</p>
+  </div>
+
+
+</div>
+
+
+<style>
+  .elback {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+    width: 100%;
+    background: linear-gradient(to bottom, #3B72BE, #2E5899);
+  }
+  .left-column {
+   /*  background: #ff0000; */
+    color: #fff;
+  }
+  .right-column {
+/*     background: #00ff00; */
+    color: #FFF;
+  }
+  h1, p {
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
